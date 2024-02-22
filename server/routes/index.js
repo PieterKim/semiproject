@@ -22,17 +22,7 @@ router.get('/', API.fetchAllPost);
 router.get('/:id', API.fetchPostById);
 router.post('/', upload, API.createPost);
 router.patch('/:id', upload, API.updatePost);
-router.delete('/:id',(req, res, next) => {
-    res.send(`${req.params.id} Router 연결 완료`)
-});
-
-
-router.get("/", (req,res) => {
-    res.send("Hello World");
-});
-
-
-
+router.delete('/:id',API.deletePost);
 
 
 module.exports = router;

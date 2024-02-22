@@ -18,7 +18,7 @@ export default class API {
         const res = await axios.patch(`${url}/${id}`, post);
         return res.data;
     }
-    static async deletePost() {
+    static async deletePost(id) {
         const res = await axios.delete(`${url}/${id}`);
         return res.data;
     }
